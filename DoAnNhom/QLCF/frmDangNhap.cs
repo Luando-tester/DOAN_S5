@@ -25,7 +25,17 @@ namespace QLCF
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            frmQLQCFcs frmQLCF = new frmQLQCFcs();
+            this.Hide();
+            frmQLCF.ShowDialog();
+            frmQLCF.Show();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
         {
             Close();
         }

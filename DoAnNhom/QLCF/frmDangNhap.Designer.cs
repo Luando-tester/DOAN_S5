@@ -33,7 +33,7 @@
             this.txtTendangnhap = new System.Windows.Forms.TextBox();
             this.txtMatkhau = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -78,16 +78,17 @@
             this.btnDangNhap.TabIndex = 4;
             this.btnDangNhap.Text = "&Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // button2
+            // btnThoat
             // 
-            this.button2.Location = new System.Drawing.Point(246, 136);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 30);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "&Thoát";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnThoat.Location = new System.Drawing.Point(246, 136);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(94, 30);
+            this.btnThoat.TabIndex = 5;
+            this.btnThoat.Text = "&Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // label3
             // 
@@ -101,12 +102,13 @@
             // 
             // frmDangNhap
             // 
+            this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(385, 193);
             this.ControlBox = false;
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtMatkhau);
             this.Controls.Add(this.txtTendangnhap);
@@ -133,7 +135,7 @@
         private System.Windows.Forms.TextBox txtTendangnhap;
         private System.Windows.Forms.TextBox txtMatkhau;
         private System.Windows.Forms.Button btnDangNhap;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label3;
     }
 }
