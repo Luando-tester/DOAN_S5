@@ -1,0 +1,7 @@
+C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\bin\Debug\QLCF.exe
+C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\bin\Debug\QLCF.pdb
+C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.frmDangNhap.resources
+C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.Properties.Resources.resources
+C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.csproj.GenerateResource.Cache
+C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.exe
+C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.pdb
