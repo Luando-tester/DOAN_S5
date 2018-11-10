@@ -60,6 +60,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UChoadon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UChoadon.Designer.cs">
+      <DependentUpon>UChoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCtaikhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCtaikhoan.Designer.cs">
+      <DependentUpon>UCtaikhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCthucuong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCthucuong.Designer.cs">
+      <DependentUpon>UCthucuong.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +93,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UChoadon.resx">
+      <DependentUpon>UChoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCtaikhoan.resx">
+      <DependentUpon>UCtaikhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCthucuong.resx">
+      <DependentUpon>UCthucuong.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

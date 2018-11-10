@@ -6,3 +6,6 @@ C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.csproj.Ge
 C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.exe
 C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.pdb
 C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.frmQLQCFcs.resources
+C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCtaikhoan.resources
+C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UChoadon.resources
+C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCthucuong.resources
