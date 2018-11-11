@@ -27,3 +27,23 @@ CREATE TABLE TableDrink
 	status NVARCHAR(100) NOT NULL DEFAULT N'Trong' --Status ban trong hoac co nguoi
 )
 GO
+
+--tao table loai thuc uong
+CREATE TABLE TypeDrink
+(
+	id INT IDENTITY PRIMARY KEY,
+	name NVARCHAR(100)NOT NULL DEFAULT N'chua dat ten'
+)
+GO
+
+--tao table thuc uong cua loai thuc uong nao
+CREATE TABLE drink
+(
+	id INT IDENTITY PRIMARY KEY,
+	name NVARCHAR(100)NOT NULL DEFAULT N'chua dat ten',
+	idTypeDrink INT NOT NULL,
+	price FLOAT NOT NULL DEFAULT 0
+	
+	FOREIGN KEY (idTypeDrink) REFERENCES dbo.TypeDrink(id)
+)
+GO
