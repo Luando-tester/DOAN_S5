@@ -60,11 +60,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCbancs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCbancs.Designer.cs">
+      <DependentUpon>UCbancs.cs</DependentUpon>
+    </Compile>
     <Compile Include="UChoadon.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UChoadon.Designer.cs">
       <DependentUpon>UChoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCdanhmuc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCdanhmuc.Designer.cs">
+      <DependentUpon>UCdanhmuc.cs</DependentUpon>
     </Compile>
     <Compile Include="UCtaikhoan.cs">
       <SubType>UserControl</SubType>
@@ -93,8 +105,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCbancs.resx">
+      <DependentUpon>UCbancs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UChoadon.resx">
       <DependentUpon>UChoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCdanhmuc.resx">
+      <DependentUpon>UCdanhmuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCtaikhoan.resx">
       <DependentUpon>UCtaikhoan.cs</DependentUpon>

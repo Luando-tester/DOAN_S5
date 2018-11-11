@@ -55,7 +55,6 @@
             this.btnDanhmuc = new System.Windows.Forms.Button();
             this.btnBan = new System.Windows.Forms.Button();
             this.btnHoadon = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnQuanlydrink = new System.Windows.Forms.Button();
             this.btnTaikhoan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -114,7 +113,7 @@
             this.panel4.Controls.Add(this.cobLoaidrink);
             this.panel4.Location = new System.Drawing.Point(334, 6);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(370, 106);
+            this.panel4.Size = new System.Drawing.Size(376, 106);
             this.panel4.TabIndex = 4;
             // 
             // label3
@@ -129,7 +128,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 57);
+            this.label2.Location = new System.Drawing.Point(10, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 5;
@@ -138,7 +137,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 10);
+            this.label1.Location = new System.Drawing.Point(10, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 16);
             this.label1.TabIndex = 4;
@@ -146,6 +145,7 @@
             // 
             // btnThemMon
             // 
+            this.btnThemMon.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemMon.Location = new System.Drawing.Point(286, 33);
             this.btnThemMon.Name = "btnThemMon";
             this.btnThemMon.Size = new System.Drawing.Size(75, 40);
@@ -190,7 +190,7 @@
             this.panel5.Controls.Add(this.btnChuyenban);
             this.panel5.Location = new System.Drawing.Point(334, 406);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(370, 57);
+            this.panel5.Size = new System.Drawing.Size(376, 57);
             this.panel5.TabIndex = 3;
             // 
             // comboBox1
@@ -198,12 +198,12 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(3, 30);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(88, 24);
+            this.comboBox1.Size = new System.Drawing.Size(97, 24);
             this.comboBox1.TabIndex = 0;
             // 
             // numGiamgia
             // 
-            this.numGiamgia.Location = new System.Drawing.Point(136, 30);
+            this.numGiamgia.Location = new System.Drawing.Point(150, 30);
             this.numGiamgia.Maximum = new decimal(new int[] {
             50,
             0,
@@ -216,7 +216,8 @@
             // 
             // btnThanhthoan
             // 
-            this.btnThanhthoan.Location = new System.Drawing.Point(269, 10);
+            this.btnThanhthoan.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhthoan.Location = new System.Drawing.Point(266, 10);
             this.btnThanhthoan.Name = "btnThanhthoan";
             this.btnThanhthoan.Size = new System.Drawing.Size(95, 43);
             this.btnThanhthoan.TabIndex = 2;
@@ -225,7 +226,8 @@
             // 
             // btnGiamgia
             // 
-            this.btnGiamgia.Location = new System.Drawing.Point(136, 3);
+            this.btnGiamgia.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGiamgia.Location = new System.Drawing.Point(150, 3);
             this.btnGiamgia.Name = "btnGiamgia";
             this.btnGiamgia.Size = new System.Drawing.Size(75, 23);
             this.btnGiamgia.TabIndex = 1;
@@ -234,9 +236,10 @@
             // 
             // btnChuyenban
             // 
+            this.btnChuyenban.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChuyenban.Location = new System.Drawing.Point(3, 3);
             this.btnChuyenban.Name = "btnChuyenban";
-            this.btnChuyenban.Size = new System.Drawing.Size(88, 23);
+            this.btnChuyenban.Size = new System.Drawing.Size(97, 23);
             this.btnChuyenban.TabIndex = 0;
             this.btnChuyenban.Text = "Chuyển Bàn";
             this.btnChuyenban.UseVisualStyleBackColor = true;
@@ -246,7 +249,7 @@
             this.panel3.Controls.Add(this.lsvHoadon);
             this.panel3.Location = new System.Drawing.Point(334, 118);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(370, 282);
+            this.panel3.Size = new System.Drawing.Size(376, 282);
             this.panel3.TabIndex = 1;
             // 
             // lsvHoadon
@@ -254,7 +257,7 @@
             this.lsvHoadon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvHoadon.Location = new System.Drawing.Point(0, 0);
             this.lsvHoadon.Name = "lsvHoadon";
-            this.lsvHoadon.Size = new System.Drawing.Size(370, 282);
+            this.lsvHoadon.Size = new System.Drawing.Size(376, 282);
             this.lsvHoadon.TabIndex = 0;
             this.lsvHoadon.UseCompatibleStateImageBehavior = false;
             // 
@@ -262,7 +265,7 @@
             // 
             this.panel2.Location = new System.Drawing.Point(6, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(322, 372);
+            this.panel2.Size = new System.Drawing.Size(322, 457);
             this.panel2.TabIndex = 0;
             // 
             // tabPquanly
@@ -290,7 +293,6 @@
             this.panel6.Controls.Add(this.btnDanhmuc);
             this.panel6.Controls.Add(this.btnBan);
             this.panel6.Controls.Add(this.btnHoadon);
-            this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.btnQuanlydrink);
             this.panel6.Controls.Add(this.btnTaikhoan);
             this.panel6.Location = new System.Drawing.Point(6, 6);
@@ -300,6 +302,7 @@
             // 
             // btnThoat
             // 
+            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Location = new System.Drawing.Point(3, 332);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(129, 39);
@@ -310,24 +313,29 @@
             // 
             // btnDanhmuc
             // 
+            this.btnDanhmuc.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDanhmuc.Location = new System.Drawing.Point(1, 287);
             this.btnDanhmuc.Name = "btnDanhmuc";
             this.btnDanhmuc.Size = new System.Drawing.Size(129, 39);
             this.btnDanhmuc.TabIndex = 5;
             this.btnDanhmuc.Text = "Danh Mục";
             this.btnDanhmuc.UseVisualStyleBackColor = true;
+            this.btnDanhmuc.Click += new System.EventHandler(this.btnDanhmuc_Click);
             // 
             // btnBan
             // 
+            this.btnBan.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBan.Location = new System.Drawing.Point(1, 152);
             this.btnBan.Name = "btnBan";
             this.btnBan.Size = new System.Drawing.Size(129, 39);
             this.btnBan.TabIndex = 4;
             this.btnBan.Text = "Bàn";
             this.btnBan.UseVisualStyleBackColor = true;
+            this.btnBan.Click += new System.EventHandler(this.btnBan_Click);
             // 
             // btnHoadon
             // 
+            this.btnHoadon.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHoadon.Location = new System.Drawing.Point(1, 242);
             this.btnHoadon.Name = "btnHoadon";
             this.btnHoadon.Size = new System.Drawing.Size(129, 39);
@@ -336,18 +344,9 @@
             this.btnHoadon.UseVisualStyleBackColor = true;
             this.btnHoadon.Click += new System.EventHandler(this.btnHoadon_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 71);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 18);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Chức Năng";
-            // 
             // btnQuanlydrink
             // 
+            this.btnQuanlydrink.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanlydrink.Location = new System.Drawing.Point(1, 197);
             this.btnQuanlydrink.Name = "btnQuanlydrink";
             this.btnQuanlydrink.Size = new System.Drawing.Size(129, 39);
@@ -358,6 +357,7 @@
             // 
             // btnTaikhoan
             // 
+            this.btnTaikhoan.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaikhoan.Location = new System.Drawing.Point(1, 107);
             this.btnTaikhoan.Name = "btnTaikhoan";
             this.btnTaikhoan.Size = new System.Drawing.Size(129, 39);
@@ -392,7 +392,6 @@
             this.panel3.ResumeLayout(false);
             this.tabPquanly.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -425,7 +424,6 @@
         private System.Windows.Forms.Button btnDanhmuc;
         private System.Windows.Forms.Button btnBan;
         private System.Windows.Forms.Button btnHoadon;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnQuanlydrink;
         private System.Windows.Forms.Button btnTaikhoan;
         private System.Windows.Forms.Button btnThoat;

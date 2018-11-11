@@ -66,5 +66,29 @@ namespace QLCF
             else
                 UCthucuong.Instace.BringToFront();
         }
+
+        private void btnDanhmuc_Click(object sender, EventArgs e)
+        {
+            if (!PnlUsercontrol.Controls.Contains(UCdanhmuc.Instace))
+            {
+                PnlUsercontrol.Controls.Add(UCdanhmuc.Instace);
+                UCdanhmuc.Instace.Dock = DockStyle.Fill;
+                UCdanhmuc.Instace.BringToFront();
+            }
+            else
+                UCdanhmuc.Instace.BringToFront();
+        }
+
+        private void btnBan_Click(object sender, EventArgs e)
+        {
+            if (!PnlUsercontrol.Controls.Contains(UCbancs.Instace))
+            {
+                PnlUsercontrol.Controls.Add(UCbancs.Instace);
+                UCbancs.Instace.Dock = DockStyle.Fill;
+                UCbancs.Instace.BringToFront();
+            }
+            else
+                UCbancs.Instace.BringToFront();
+        }
     }
 }

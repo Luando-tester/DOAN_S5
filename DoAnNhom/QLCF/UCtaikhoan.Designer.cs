@@ -90,7 +90,7 @@
             // 
             // txtMatkhaure
             // 
-            this.txtMatkhaure.Location = new System.Drawing.Point(322, 229);
+            this.txtMatkhaure.Location = new System.Drawing.Point(285, 221);
             this.txtMatkhaure.Name = "txtMatkhaure";
             this.txtMatkhaure.Size = new System.Drawing.Size(154, 23);
             this.txtMatkhaure.TabIndex = 9;
@@ -99,16 +99,16 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(110, 229);
+            this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(132, 224);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(162, 19);
+            this.label6.Size = new System.Drawing.Size(127, 16);
             this.label6.TabIndex = 8;
             this.label6.Text = "Nhập Lại Mật Khẩu";
             // 
             // txtMatkhaumoi
             // 
-            this.txtMatkhaumoi.Location = new System.Drawing.Point(322, 193);
+            this.txtMatkhaumoi.Location = new System.Drawing.Point(285, 181);
             this.txtMatkhaumoi.Name = "txtMatkhaumoi";
             this.txtMatkhaumoi.Size = new System.Drawing.Size(154, 23);
             this.txtMatkhaumoi.TabIndex = 7;
@@ -117,16 +117,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(110, 193);
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(132, 188);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 19);
+            this.label5.Size = new System.Drawing.Size(95, 16);
             this.label5.TabIndex = 6;
             this.label5.Text = "Mật Khẩu Mới";
             // 
             // txtTenhienthi
             // 
-            this.txtTenhienthi.Location = new System.Drawing.Point(322, 117);
+            this.txtTenhienthi.Location = new System.Drawing.Point(285, 109);
             this.txtTenhienthi.Name = "txtTenhienthi";
             this.txtTenhienthi.Size = new System.Drawing.Size(154, 23);
             this.txtTenhienthi.TabIndex = 5;
@@ -134,16 +134,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(110, 117);
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(132, 112);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 19);
+            this.label4.Size = new System.Drawing.Size(85, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Tên Hiển Thị";
             // 
             // txtMatkhaucu
             // 
-            this.txtMatkhaucu.Location = new System.Drawing.Point(322, 154);
+            this.txtMatkhaucu.Location = new System.Drawing.Point(285, 146);
             this.txtMatkhaucu.Name = "txtMatkhaucu";
             this.txtMatkhaucu.Size = new System.Drawing.Size(154, 23);
             this.txtMatkhaucu.TabIndex = 3;
@@ -152,17 +152,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(110, 154);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(132, 149);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 19);
+            this.label3.Size = new System.Drawing.Size(69, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mật Khẩu";
             // 
             // txtTendangnhap
             // 
             this.txtTendangnhap.Enabled = false;
-            this.txtTendangnhap.Location = new System.Drawing.Point(322, 79);
+            this.txtTendangnhap.Location = new System.Drawing.Point(285, 71);
             this.txtTendangnhap.Name = "txtTendangnhap";
             this.txtTendangnhap.Size = new System.Drawing.Size(154, 23);
             this.txtTendangnhap.TabIndex = 1;
@@ -170,10 +170,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(110, 79);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(132, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 19);
+            this.label2.Size = new System.Drawing.Size(105, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên Đăng Nhập";
             // 
@@ -188,6 +188,7 @@
             // 
             // btnLuumatkhau
             // 
+            this.btnLuumatkhau.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuumatkhau.Location = new System.Drawing.Point(471, 3);
             this.btnLuumatkhau.Name = "btnLuumatkhau";
             this.btnLuumatkhau.Size = new System.Drawing.Size(83, 40);

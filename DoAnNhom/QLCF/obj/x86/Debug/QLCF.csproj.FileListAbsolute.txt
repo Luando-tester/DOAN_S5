@@ -9,3 +9,6 @@ C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.frmQLQCFc
 C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCtaikhoan.resources
 C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UChoadon.resources
 C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCthucuong.resources
+C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.csprojResolveAssemblyReference.cache
+C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCdanhmuc.resources
+C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCbancs.resources
