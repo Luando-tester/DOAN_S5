@@ -60,6 +60,30 @@ GO
 -- END -- 
 
 -- Truc -- 
+--tao table hoa don ban
+CREATE TABLE Bill
+(
+	id INT IDENTITY PRIMARY KEY,
+	DateCheckIn Date NOT NULL DEFAULT GETDATE(),
+	DateCheckOut Date NOT NULL,
+	idTable INT NOT NULL,
+	status INT NOT NULL DEFAULT 0 --0:chua thanh toan , 1: da thanh toan
+	
+	FOREIGN KEY (idTable) REFERENCES dbo.TableDrink(id)
+)
+GO
 
+--tao table bao cao hoa don 
+CREATE TABLE DrinkBill
+(  
+	id INT IDENTITY PRIMARY KEY,
+	idBill INT NOT NULL,
+	idDrink INT NOT NULL,
+	count INT NOT NULL DEFAULT 0
+	
+	FOREIGN KEY (idBill) REFERENCES dbo.Bill(id),
+	FOREIGN KEY (idDrink) REFERENCES dbo.Drink(id)
+)
+GO
 
 -- END -- 
