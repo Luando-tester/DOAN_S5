@@ -61,6 +61,7 @@ GO
 
 -- Truc -- 
 --tao table hoa don ban
+--test 
 CREATE TABLE Bill
 (
 	id INT IDENTITY PRIMARY KEY,
