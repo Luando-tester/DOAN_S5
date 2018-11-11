@@ -1,5 +1,7 @@
 --SQL quan ly quan caphe
 
+
+-- Lai -- 
 --tao bang database 
 CREATE DATABASE CoffeManagement
 GO
@@ -19,6 +21,10 @@ CREATE TABLE Account
 	Type INT NOT NULL DEFAULT 0 --loai tai khoan -- 0:Quan ly -- 1:Nhan vien
 )
 GO
+
+-- End -- 
+
+-- Luan -- 
 --Tao table ban nuoc
 CREATE TABLE TableDrink
 (
@@ -28,6 +34,9 @@ CREATE TABLE TableDrink
 )
 GO
 
+-- END -- 
+
+-- Nguyen -- 
 --tao table loai thuc uong
 CREATE TABLE TypeDrink
 (
@@ -47,3 +56,10 @@ CREATE TABLE drink
 	FOREIGN KEY (idTypeDrink) REFERENCES dbo.TypeDrink(id)
 )
 GO
+
+-- END -- 
+
+-- Truc -- 
+
+
+-- END -- 
