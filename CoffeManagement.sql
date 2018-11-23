@@ -89,10 +89,6 @@ GO
 
 -- END -- 
 
-INSERT INTO dbo.Account(UserName,DisplayName,PassWord,Type)
-VALUES(N'Admin',N'Admin',N'1',0)
-GO
-
 CREATE PROC SP_Ban
 AS SELECT * FROM dbo.TableDrink
 GO
@@ -163,10 +159,10 @@ BEGIN
 END
 GO
 
-EXEC SP_capnhatTaikhoan N'a',N'lainguyen',N'22',1
+EXEC SP_capnhatTaikhoan N'lai',N'lainguyen',N'22',1
 GO
 
-EXEC SP_themTaikhoan N'a','admin','1',0
+EXEC SP_themTaikhoan N'lai','Admin','1',0
 GO
 
 --Delete taikhoan
@@ -178,7 +174,7 @@ BEGIN
 END
 GO
 
-EXEC SP_xoaTaikhoan N'a'
+EXEC SP_xoaTaikhoan N'lai'
 GO
 
 --lay danh sach loai thuc uong
@@ -198,7 +194,7 @@ BEGIN
 END
 GO
 
-EXEC SP_themLoaidrink N'cookies'
+EXEC SP_themLoaidrink N'Capuchino'
 GO
 --cap nhat loai thuc uong
 CREATE PROC SP_capnhatLoaidrink(@id INT,@name NVARCHAR(100))
