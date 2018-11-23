@@ -57,6 +57,7 @@
             this.btnHoadon = new System.Windows.Forms.Button();
             this.btnQuanlydrink = new System.Windows.Forms.Button();
             this.btnTaikhoan = new System.Windows.Forms.Button();
+            this.flTabledrink = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.tabCquanly.SuspendLayout();
             this.tabPtrangchu.SuspendLayout();
@@ -65,6 +66,7 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numGiamgia)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.tabPquanly.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
@@ -263,6 +265,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.flTabledrink);
             this.panel2.Location = new System.Drawing.Point(6, 6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(322, 457);
@@ -366,6 +369,15 @@
             this.btnTaikhoan.UseVisualStyleBackColor = true;
             this.btnTaikhoan.Click += new System.EventHandler(this.btnTaikhoan_Click);
             // 
+            // flTabledrink
+            // 
+            this.flTabledrink.AutoScroll = true;
+            this.flTabledrink.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flTabledrink.Location = new System.Drawing.Point(0, 0);
+            this.flTabledrink.Name = "flTabledrink";
+            this.flTabledrink.Size = new System.Drawing.Size(322, 457);
+            this.flTabledrink.TabIndex = 0;
+            // 
             // frmQLQCFcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -390,6 +402,7 @@
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numGiamgia)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.tabPquanly.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -427,5 +440,6 @@
         private System.Windows.Forms.Button btnQuanlydrink;
         private System.Windows.Forms.Button btnTaikhoan;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.FlowLayoutPanel flTabledrink;
     }
 }

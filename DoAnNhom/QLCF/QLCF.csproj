@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\ClsDangnhap.cs" />
+    <Compile Include="Class\ClsTableDrink.cs" />
+    <Compile Include="DTB\DataProvider.cs" />
+    <Compile Include="DTB\TableDrink.cs" />
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>

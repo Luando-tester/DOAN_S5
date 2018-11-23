@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using QLCF.Class;
+using QLCF.DTB;
 
 namespace QLCF
 {
@@ -15,6 +17,7 @@ namespace QLCF
         public frmQLQCFcs()
         {
             InitializeComponent();
+            LoadTableDrink();
         }
 
         private void btnTaikhoan_Click(object sender, EventArgs e)
@@ -89,6 +92,26 @@ namespace QLCF
             }
             else
                 UCbancs.Instace.BringToFront();
+        }
+
+        void LoadTableDrink()
+        {
+            List<ClsTableDrink> tableList = TableDrink.Instance.loadTableDrink();
+            foreach (ClsTableDrink item in tableList)
+            {
+                Button btnTable = new Button() { Width = TableDrink.TableWidth, Height = TableDrink.TableHeight };
+                btnTable.Text = item.Name + Environment.NewLine + item.Status;
+                switch (item.Status)
+                {
+                    case "Trống":
+                        btnTable.BackColor = Color.White;
+                        break;
+                    default:
+                        btnTable.BackColor = Color.Aqua;
+                        break;
+                }
+                flTabledrink.Controls.Add(btnTable);
+            }
         }
     }
 }

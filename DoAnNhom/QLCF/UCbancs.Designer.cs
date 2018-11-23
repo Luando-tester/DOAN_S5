@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTimthucuong = new System.Windows.Forms.TextBox();
-            this.btnTimkiem = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnXem = new System.Windows.Forms.Button();
@@ -48,7 +44,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -58,7 +53,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel2);
@@ -67,43 +61,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(563, 457);
             this.panel1.TabIndex = 1;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.txtTimthucuong);
-            this.panel5.Controls.Add(this.btnTimkiem);
-            this.panel5.Location = new System.Drawing.Point(6, 84);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(300, 81);
-            this.panel5.TabIndex = 7;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tìm Thức Uống";
-            // 
-            // txtTimthucuong
-            // 
-            this.txtTimthucuong.Location = new System.Drawing.Point(25, 37);
-            this.txtTimthucuong.Name = "txtTimthucuong";
-            this.txtTimthucuong.Size = new System.Drawing.Size(161, 23);
-            this.txtTimthucuong.TabIndex = 1;
-            // 
-            // btnTimkiem
-            // 
-            this.btnTimkiem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimkiem.Location = new System.Drawing.Point(218, 23);
-            this.btnTimkiem.Name = "btnTimkiem";
-            this.btnTimkiem.Size = new System.Drawing.Size(75, 37);
-            this.btnTimkiem.TabIndex = 0;
-            this.btnTimkiem.Text = "Tìm ";
-            this.btnTimkiem.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -245,12 +202,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCbancs";
             this.Size = new System.Drawing.Size(563, 457);
             this.panel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -265,10 +220,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtTimthucuong;
-        private System.Windows.Forms.Button btnTimkiem;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnXem;
