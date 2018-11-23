@@ -102,6 +102,18 @@ namespace QLCF
                 UCbancs.Instace.BringToFront();
         }
 
+        //Hiển thị usercontrol Admin
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            if (!PnlUsercontrol.Controls.Contains(UCadmin.Instance))
+            {
+                PnlUsercontrol.Controls.Add(UCadmin.Instance);
+                UCadmin.Instance.Dock = DockStyle.Fill;
+                UCadmin.Instance.BringToFront();
+            }
+            else
+                UCadmin.Instance.BringToFront();
+        }
         //Load danh sách bàn lên giao diện hiện thị bằng button gồm tên bàn + status
         void LoadTableDrink()
         {
@@ -149,6 +161,6 @@ namespace QLCF
         {
             int tableId = ((sender as Button).Tag as ClsTableDrink).Id;
             ShowBill(tableId);
-        }
+        }  
     }
 }

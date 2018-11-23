@@ -163,9 +163,9 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.dtgvBan);
-            this.panel4.Location = new System.Drawing.Point(3, 171);
+            this.panel4.Location = new System.Drawing.Point(3, 84);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(303, 283);
+            this.panel4.Size = new System.Drawing.Size(303, 370);
             this.panel4.TabIndex = 5;
             // 
             // dtgvBan
@@ -174,7 +174,7 @@
             this.dtgvBan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvBan.Location = new System.Drawing.Point(0, 0);
             this.dtgvBan.Name = "dtgvBan";
-            this.dtgvBan.Size = new System.Drawing.Size(303, 283);
+            this.dtgvBan.Size = new System.Drawing.Size(303, 370);
             this.dtgvBan.TabIndex = 0;
             // 
             // panel2

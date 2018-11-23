@@ -63,6 +63,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtTotalPrice = new System.Windows.Forms.TextBox();
+            this.btnAdmin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabCquanly.SuspendLayout();
             this.tabPtrangchu.SuspendLayout();
@@ -305,6 +306,7 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.btnAdmin);
             this.panel6.Controls.Add(this.btnThoat);
             this.panel6.Controls.Add(this.btnDanhmuc);
             this.panel6.Controls.Add(this.btnBan);
@@ -421,6 +423,17 @@
             this.txtTotalPrice.TabIndex = 4;
             this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // btnAdmin
+            // 
+            this.btnAdmin.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmin.Location = new System.Drawing.Point(3, 332);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(129, 39);
+            this.btnAdmin.TabIndex = 7;
+            this.btnAdmin.Text = "Admin";
+            this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            // 
             // frmQLQCFcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -490,5 +503,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.TextBox txtTotalPrice;
+        private System.Windows.Forms.Button btnAdmin;
     }
 }
