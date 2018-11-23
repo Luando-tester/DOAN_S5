@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using QLCF.Class;
+using QLCF.DTB;
 
 namespace QLCF
 {
@@ -27,9 +28,11 @@ namespace QLCF
         }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+            //username Admin
+            //password 1
             string username = txtTendangnhap.Text;
             string password = txtMatkhau.Text;
-            if (Login(username,password))
+            if (Logins(username,password))
             {
                 frmQLQCFcs frmQLCF = new frmQLQCFcs();
                 this.Hide();
@@ -40,9 +43,9 @@ namespace QLCF
                 MessageBox.Show("Sai tài khoản hoặc mật khẩu\nVui lòng kiểm tra lại!");
         }
 
-        bool Login(string username,string password)
+        bool Logins(string username,string password)
         {
-            return ClsDangnhap.Instance.Login(username,password);
+            return Login.Instance.Logins(username,password);
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
