@@ -17,6 +17,7 @@ namespace QLCF.DTB
         }
         private Login() { }
 
+        //Kiểm tra khi truyền username và password 
         public bool Logins(string username, string password)
         {
             string query = "SELECT * FROM dbo.Account WHERE Username = @username and Password = @password";

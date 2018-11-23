@@ -26,6 +26,8 @@ namespace QLCF
                 e.Cancel = true;
             }
         }
+
+        //Xử lý đăng nhập
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             //username Admin
@@ -48,6 +50,7 @@ namespace QLCF
             return Login.Instance.Logins(username,password);
         }
 
+        //Chức năng thoát
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Close();

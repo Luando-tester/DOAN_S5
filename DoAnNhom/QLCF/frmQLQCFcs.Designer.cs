@@ -58,6 +58,11 @@
             this.btnQuanlydrink = new System.Windows.Forms.Button();
             this.btnTaikhoan = new System.Windows.Forms.Button();
             this.flTabledrink = new System.Windows.Forms.FlowLayoutPanel();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tabCquanly.SuspendLayout();
             this.tabPtrangchu.SuspendLayout();
@@ -185,6 +190,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.txtTotalPrice);
             this.panel5.Controls.Add(this.comboBox1);
             this.panel5.Controls.Add(this.numGiamgia);
             this.panel5.Controls.Add(this.btnThanhthoan);
@@ -205,7 +211,7 @@
             // 
             // numGiamgia
             // 
-            this.numGiamgia.Location = new System.Drawing.Point(150, 30);
+            this.numGiamgia.Location = new System.Drawing.Point(106, 30);
             this.numGiamgia.Maximum = new decimal(new int[] {
             50,
             0,
@@ -219,9 +225,9 @@
             // btnThanhthoan
             // 
             this.btnThanhthoan.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhthoan.Location = new System.Drawing.Point(266, 10);
+            this.btnThanhthoan.Location = new System.Drawing.Point(295, 11);
             this.btnThanhthoan.Name = "btnThanhthoan";
-            this.btnThanhthoan.Size = new System.Drawing.Size(95, 43);
+            this.btnThanhthoan.Size = new System.Drawing.Size(81, 43);
             this.btnThanhthoan.TabIndex = 2;
             this.btnThanhthoan.Text = "Thanh Toán";
             this.btnThanhthoan.UseVisualStyleBackColor = true;
@@ -229,7 +235,7 @@
             // btnGiamgia
             // 
             this.btnGiamgia.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGiamgia.Location = new System.Drawing.Point(150, 3);
+            this.btnGiamgia.Location = new System.Drawing.Point(106, 3);
             this.btnGiamgia.Name = "btnGiamgia";
             this.btnGiamgia.Size = new System.Drawing.Size(75, 23);
             this.btnGiamgia.TabIndex = 1;
@@ -256,12 +262,19 @@
             // 
             // lsvHoadon
             // 
+            this.lsvHoadon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
             this.lsvHoadon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvHoadon.GridLines = true;
             this.lsvHoadon.Location = new System.Drawing.Point(0, 0);
             this.lsvHoadon.Name = "lsvHoadon";
             this.lsvHoadon.Size = new System.Drawing.Size(376, 282);
             this.lsvHoadon.TabIndex = 0;
             this.lsvHoadon.UseCompatibleStateImageBehavior = false;
+            this.lsvHoadon.View = System.Windows.Forms.View.Details;
             // 
             // panel2
             // 
@@ -306,7 +319,7 @@
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(3, 332);
+            this.btnThoat.Location = new System.Drawing.Point(3, 415);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(129, 39);
             this.btnThoat.TabIndex = 6;
@@ -317,7 +330,7 @@
             // btnDanhmuc
             // 
             this.btnDanhmuc.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDanhmuc.Location = new System.Drawing.Point(1, 287);
+            this.btnDanhmuc.Location = new System.Drawing.Point(3, 242);
             this.btnDanhmuc.Name = "btnDanhmuc";
             this.btnDanhmuc.Size = new System.Drawing.Size(129, 39);
             this.btnDanhmuc.TabIndex = 5;
@@ -328,7 +341,7 @@
             // btnBan
             // 
             this.btnBan.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBan.Location = new System.Drawing.Point(1, 152);
+            this.btnBan.Location = new System.Drawing.Point(3, 287);
             this.btnBan.Name = "btnBan";
             this.btnBan.Size = new System.Drawing.Size(129, 39);
             this.btnBan.TabIndex = 4;
@@ -339,7 +352,7 @@
             // btnHoadon
             // 
             this.btnHoadon.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHoadon.Location = new System.Drawing.Point(1, 242);
+            this.btnHoadon.Location = new System.Drawing.Point(3, 152);
             this.btnHoadon.Name = "btnHoadon";
             this.btnHoadon.Size = new System.Drawing.Size(129, 39);
             this.btnHoadon.TabIndex = 3;
@@ -350,7 +363,7 @@
             // btnQuanlydrink
             // 
             this.btnQuanlydrink.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuanlydrink.Location = new System.Drawing.Point(1, 197);
+            this.btnQuanlydrink.Location = new System.Drawing.Point(3, 197);
             this.btnQuanlydrink.Name = "btnQuanlydrink";
             this.btnQuanlydrink.Size = new System.Drawing.Size(129, 39);
             this.btnQuanlydrink.TabIndex = 1;
@@ -361,7 +374,7 @@
             // btnTaikhoan
             // 
             this.btnTaikhoan.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaikhoan.Location = new System.Drawing.Point(1, 107);
+            this.btnTaikhoan.Location = new System.Drawing.Point(3, 107);
             this.btnTaikhoan.Name = "btnTaikhoan";
             this.btnTaikhoan.Size = new System.Drawing.Size(129, 39);
             this.btnTaikhoan.TabIndex = 0;
@@ -377,6 +390,36 @@
             this.flTabledrink.Name = "flTabledrink";
             this.flTabledrink.Size = new System.Drawing.Size(322, 457);
             this.flTabledrink.TabIndex = 0;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên";
+            this.columnHeader1.Width = 108;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Số Lượng";
+            this.columnHeader2.Width = 76;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Giá";
+            this.columnHeader3.Width = 86;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Tổng";
+            this.columnHeader4.Width = 102;
+            // 
+            // txtTotalPrice
+            // 
+            this.txtTotalPrice.Enabled = false;
+            this.txtTotalPrice.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPrice.Location = new System.Drawing.Point(187, 21);
+            this.txtTotalPrice.Name = "txtTotalPrice";
+            this.txtTotalPrice.Size = new System.Drawing.Size(102, 23);
+            this.txtTotalPrice.TabIndex = 4;
+            this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // frmQLQCFcs
             // 
@@ -400,6 +443,7 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSoluongdrink)).EndInit();
             this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numGiamgia)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -441,5 +485,10 @@
         private System.Windows.Forms.Button btnTaikhoan;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.FlowLayoutPanel flTabledrink;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.TextBox txtTotalPrice;
     }
 }

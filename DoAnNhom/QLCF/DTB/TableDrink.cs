@@ -20,6 +20,8 @@ namespace QLCF.DTB
         public static int TableHeight = 90;
 
         private TableDrink() { }
+
+        //Load danh sách bàn hiển thị ra giao diện
         public List<ClsTableDrink> loadTableDrink()
         {
             List<ClsTableDrink> tablelist = new List<ClsTableDrink>();

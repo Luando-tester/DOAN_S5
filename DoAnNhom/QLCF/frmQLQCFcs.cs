@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using QLCF.Class;
 using QLCF.DTB;
+using System.Globalization;
 
 namespace QLCF
 {
@@ -20,6 +21,7 @@ namespace QLCF
             LoadTableDrink();
         }
 
+        //Hiển thị usercontrol Tài Khoản
         private void btnTaikhoan_Click(object sender, EventArgs e)
         {
             if (!PnlUsercontrol.Controls.Contains(UCtaikhoan.Instace))
@@ -32,11 +34,13 @@ namespace QLCF
                 UCtaikhoan.Instace.BringToFront();
         }
 
+        //Chức năng thoát chương trình
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        //Chặn khi tắt chương trình
         private void frmQLQCFcs_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dialog = MessageBox.Show("Bạn có muốn thoát không ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -46,6 +50,7 @@ namespace QLCF
             }
         }
 
+        //Hiển thị usercontrol Hóa Đơn 
         private void btnHoadon_Click(object sender, EventArgs e)
         {
             if (!PnlUsercontrol.Controls.Contains(UChoadon.Instace))
@@ -58,6 +63,7 @@ namespace QLCF
                 UChoadon.Instace.BringToFront();
         }
 
+        //Hiển thị usercontrol Drink
         private void btnQuanlydrink_Click(object sender, EventArgs e)
         {
             if (!PnlUsercontrol.Controls.Contains(UCthucuong.Instace))
@@ -70,6 +76,7 @@ namespace QLCF
                 UCthucuong.Instace.BringToFront();
         }
 
+        //Hiển thị usercontrol Danh Mục
         private void btnDanhmuc_Click(object sender, EventArgs e)
         {
             if (!PnlUsercontrol.Controls.Contains(UCdanhmuc.Instace))
@@ -81,7 +88,8 @@ namespace QLCF
             else
                 UCdanhmuc.Instace.BringToFront();
         }
-
+        
+        //Hiển thị usercontrol Bàn
         private void btnBan_Click(object sender, EventArgs e)
         {
             if (!PnlUsercontrol.Controls.Contains(UCbancs.Instace))
@@ -94,6 +102,7 @@ namespace QLCF
                 UCbancs.Instace.BringToFront();
         }
 
+        //Load danh sách bàn lên giao diện hiện thị bằng button gồm tên bàn + status
         void LoadTableDrink()
         {
             List<ClsTableDrink> tableList = TableDrink.Instance.loadTableDrink();
@@ -101,6 +110,8 @@ namespace QLCF
             {
                 Button btnTable = new Button() { Width = TableDrink.TableWidth, Height = TableDrink.TableHeight };
                 btnTable.Text = item.Name + Environment.NewLine + item.Status;
+                btnTable.Click += btnTable_Click;
+                btnTable.Tag = item;
                 switch (item.Status)
                 {
                     case "Trống":
@@ -112,6 +123,32 @@ namespace QLCF
                 }
                 flTabledrink.Controls.Add(btnTable);
             }
+        }
+
+        //Hiển thị hóa đơn của từng bàn
+        void ShowBill(int id)
+        {
+            lsvHoadon.Items.Clear();
+            List<QLCF.Class.ClsMenu> listBill = QLCF.DTB.Menu.Instance.getListMenu(id);
+            float totalPrice = 0;
+            foreach(QLCF.Class.ClsMenu item in listBill)
+            {
+                ListViewItem lsvItem = new ListViewItem(item.Name.ToString());
+                lsvItem.SubItems.Add(item.Count.ToString());
+                lsvItem.SubItems.Add(item.Price.ToString());
+                lsvItem.SubItems.Add(item.Total.ToString());
+                totalPrice += item.Total;
+                lsvHoadon.Items.Add(lsvItem);
+            }
+            CultureInfo culture = new CultureInfo("vi-VN");
+            txtTotalPrice.Text = totalPrice.ToString("c",culture);
+        }
+
+        //Event hiển thị hóa đơn tương ứng khi click vào bàn 
+        void btnTable_Click(object sender, EventArgs e)
+        {
+            int tableId = ((sender as Button).Tag as ClsTableDrink).Id;
+            ShowBill(tableId);
         }
     }
 }
