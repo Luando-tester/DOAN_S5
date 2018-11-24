@@ -47,15 +47,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\ClsBill.cs" />
+    <Compile Include="Class\ClsDrink.cs" />
     <Compile Include="Class\ClsDrinkBill.cs" />
     <Compile Include="Class\ClsMenu.cs" />
     <Compile Include="Class\ClsTableDrink.cs" />
+    <Compile Include="Class\ClsTypeDrink.cs" />
     <Compile Include="DTB\Bill.cs" />
     <Compile Include="DTB\DataProvider.cs" />
+    <Compile Include="DTB\Drink.cs" />
     <Compile Include="DTB\DrinkBill.cs" />
     <Compile Include="DTB\Login.cs" />
     <Compile Include="DTB\Menu.cs" />
     <Compile Include="DTB\TableDrink.cs" />
+    <Compile Include="DTB\TypeDrink.cs" />
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>

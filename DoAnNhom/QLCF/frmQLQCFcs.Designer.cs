@@ -35,11 +35,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnThemMon = new System.Windows.Forms.Button();
+            this.btnAddDrink = new System.Windows.Forms.Button();
             this.numSoluongdrink = new System.Windows.Forms.NumericUpDown();
             this.cobDrink = new System.Windows.Forms.ComboBox();
             this.cobLoaidrink = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.numGiamgia = new System.Windows.Forms.NumericUpDown();
             this.btnThanhthoan = new System.Windows.Forms.Button();
@@ -47,23 +48,22 @@
             this.btnChuyenban = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lsvHoadon = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.flTabledrink = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPquanly = new System.Windows.Forms.TabPage();
             this.PnlUsercontrol = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnAdmin = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDanhmuc = new System.Windows.Forms.Button();
             this.btnBan = new System.Windows.Forms.Button();
             this.btnHoadon = new System.Windows.Forms.Button();
             this.btnQuanlydrink = new System.Windows.Forms.Button();
             this.btnTaikhoan = new System.Windows.Forms.Button();
-            this.flTabledrink = new System.Windows.Forms.FlowLayoutPanel();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtTotalPrice = new System.Windows.Forms.TextBox();
-            this.btnAdmin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabCquanly.SuspendLayout();
             this.tabPtrangchu.SuspendLayout();
@@ -115,7 +115,7 @@
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.btnThemMon);
+            this.panel4.Controls.Add(this.btnAddDrink);
             this.panel4.Controls.Add(this.numSoluongdrink);
             this.panel4.Controls.Add(this.cobDrink);
             this.panel4.Controls.Add(this.cobLoaidrink);
@@ -151,15 +151,16 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Loại";
             // 
-            // btnThemMon
+            // btnAddDrink
             // 
-            this.btnThemMon.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemMon.Location = new System.Drawing.Point(286, 33);
-            this.btnThemMon.Name = "btnThemMon";
-            this.btnThemMon.Size = new System.Drawing.Size(75, 40);
-            this.btnThemMon.TabIndex = 3;
-            this.btnThemMon.Text = "Thêm";
-            this.btnThemMon.UseVisualStyleBackColor = true;
+            this.btnAddDrink.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddDrink.Location = new System.Drawing.Point(286, 33);
+            this.btnAddDrink.Name = "btnAddDrink";
+            this.btnAddDrink.Size = new System.Drawing.Size(75, 40);
+            this.btnAddDrink.TabIndex = 3;
+            this.btnAddDrink.Text = "Thêm";
+            this.btnAddDrink.UseVisualStyleBackColor = true;
+            this.btnAddDrink.Click += new System.EventHandler(this.btnAddDrink_Click);
             // 
             // numSoluongdrink
             // 
@@ -188,6 +189,7 @@
             this.cobLoaidrink.Name = "cobLoaidrink";
             this.cobLoaidrink.Size = new System.Drawing.Size(142, 24);
             this.cobLoaidrink.TabIndex = 0;
+            this.cobLoaidrink.SelectedIndexChanged += new System.EventHandler(this.cobLoaidrink_SelectedIndexChanged);
             // 
             // panel5
             // 
@@ -201,6 +203,16 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(376, 57);
             this.panel5.TabIndex = 3;
+            // 
+            // txtTotalPrice
+            // 
+            this.txtTotalPrice.Enabled = false;
+            this.txtTotalPrice.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPrice.Location = new System.Drawing.Point(187, 21);
+            this.txtTotalPrice.Name = "txtTotalPrice";
+            this.txtTotalPrice.Size = new System.Drawing.Size(102, 23);
+            this.txtTotalPrice.TabIndex = 4;
+            this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // comboBox1
             // 
@@ -232,6 +244,7 @@
             this.btnThanhthoan.TabIndex = 2;
             this.btnThanhthoan.Text = "Thanh Toán";
             this.btnThanhthoan.UseVisualStyleBackColor = true;
+            this.btnThanhthoan.Click += new System.EventHandler(this.btnThanhthoan_Click);
             // 
             // btnGiamgia
             // 
@@ -277,6 +290,26 @@
             this.lsvHoadon.UseCompatibleStateImageBehavior = false;
             this.lsvHoadon.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên";
+            this.columnHeader1.Width = 108;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Số Lượng";
+            this.columnHeader2.Width = 76;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Giá";
+            this.columnHeader3.Width = 86;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Tổng";
+            this.columnHeader4.Width = 102;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.flTabledrink);
@@ -284,6 +317,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(322, 457);
             this.panel2.TabIndex = 0;
+            // 
+            // flTabledrink
+            // 
+            this.flTabledrink.AutoScroll = true;
+            this.flTabledrink.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flTabledrink.Location = new System.Drawing.Point(0, 0);
+            this.flTabledrink.Name = "flTabledrink";
+            this.flTabledrink.Size = new System.Drawing.Size(322, 457);
+            this.flTabledrink.TabIndex = 0;
             // 
             // tabPquanly
             // 
@@ -317,6 +359,17 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(135, 457);
             this.panel6.TabIndex = 1;
+            // 
+            // btnAdmin
+            // 
+            this.btnAdmin.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmin.Location = new System.Drawing.Point(3, 332);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(129, 39);
+            this.btnAdmin.TabIndex = 7;
+            this.btnAdmin.Text = "Admin";
+            this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // btnThoat
             // 
@@ -384,56 +437,6 @@
             this.btnTaikhoan.UseVisualStyleBackColor = true;
             this.btnTaikhoan.Click += new System.EventHandler(this.btnTaikhoan_Click);
             // 
-            // flTabledrink
-            // 
-            this.flTabledrink.AutoScroll = true;
-            this.flTabledrink.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flTabledrink.Location = new System.Drawing.Point(0, 0);
-            this.flTabledrink.Name = "flTabledrink";
-            this.flTabledrink.Size = new System.Drawing.Size(322, 457);
-            this.flTabledrink.TabIndex = 0;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Tên";
-            this.columnHeader1.Width = 108;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Số Lượng";
-            this.columnHeader2.Width = 76;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Giá";
-            this.columnHeader3.Width = 86;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Tổng";
-            this.columnHeader4.Width = 102;
-            // 
-            // txtTotalPrice
-            // 
-            this.txtTotalPrice.Enabled = false;
-            this.txtTotalPrice.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalPrice.Location = new System.Drawing.Point(187, 21);
-            this.txtTotalPrice.Name = "txtTotalPrice";
-            this.txtTotalPrice.Size = new System.Drawing.Size(102, 23);
-            this.txtTotalPrice.TabIndex = 4;
-            this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmin.Location = new System.Drawing.Point(3, 332);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(129, 39);
-            this.btnAdmin.TabIndex = 7;
-            this.btnAdmin.Text = "Admin";
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
-            // 
             // frmQLQCFcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -479,7 +482,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabPage tabPquanly;
-        private System.Windows.Forms.Button btnThemMon;
+        private System.Windows.Forms.Button btnAddDrink;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.NumericUpDown numGiamgia;
         private System.Windows.Forms.Button btnThanhthoan;

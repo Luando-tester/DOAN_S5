@@ -31,5 +31,10 @@ namespace QLCF.DTB
             }
             return listBill;
         }
+
+        public void AddDrinkBill(int idBill, int idDrink,int count)
+        {
+            DataProvider.Instance.ExcuteNonQuery("SP_AddDrinkBill @idBill , @idDrink , @count",new object[]{ idBill, idDrink, count});
+        }
     }
 }

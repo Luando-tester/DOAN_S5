@@ -30,5 +30,25 @@ namespace QLCF.DTB
             }
             return -1;
         }
+        public void AddBill(int id)
+        {
+            DataProvider.Instance.ExcuteNonQuery("EXEC SP_AddBill @idTable", new object[]{id});
+        }
+
+        public int getIdBill()
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExcuteScalar("SELECT MAX(id) FROM Bill");
+            }
+            catch
+            {
+                return 1;
+            }
+        }
+        public void CheckOut(int id)
+        {
+            DataProvider.Instance.ExcuteNonQuery("EXEC SP_BillidTable " + id);
+        }
     }
 }

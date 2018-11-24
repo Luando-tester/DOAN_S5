@@ -18,6 +18,7 @@ namespace QLCF
         public frmQLQCFcs()
         {
             InitializeComponent();
+            LoadTypeDrink();
             LoadTableDrink();
         }
 
@@ -114,9 +115,11 @@ namespace QLCF
             else
                 UCadmin.Instance.BringToFront();
         }
+
         //Load danh sách bàn lên giao diện hiện thị bằng button gồm tên bàn + status
         void LoadTableDrink()
         {
+            flTabledrink.Controls.Clear();
             List<ClsTableDrink> tableList = TableDrink.Instance.loadTableDrink();
             foreach (ClsTableDrink item in tableList)
             {
@@ -160,7 +163,71 @@ namespace QLCF
         void btnTable_Click(object sender, EventArgs e)
         {
             int tableId = ((sender as Button).Tag as ClsTableDrink).Id;
+            lsvHoadon.Tag = (sender as Button).Tag;
             ShowBill(tableId);
         }  
+
+        //Load danh sach TypeDrink
+        void LoadTypeDrink()
+        {
+            List<ClsTypeDrink> listTypeDrink = TypeDrink.Instance.ListTypeDrink();
+            cobLoaidrink.DataSource = listTypeDrink;
+            cobLoaidrink.DisplayMember = "name";
+        }
+
+        //Load danh sach Drink theo TypeDrink
+        void LoadDrink(int id)
+        {
+            List<ClsDrink> listDrink = Drink.Instance.listDrink(id);
+            cobDrink.DataSource = listDrink;
+            cobDrink.DisplayMember = "name";
+        }
+
+        //Load danh sach comboBox khi Selected item
+        private void cobLoaidrink_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int id = 0;
+            ComboBox cob = sender as ComboBox;
+            if (cob.SelectedItem == null)
+                return;
+            ClsTypeDrink selected = cob.SelectedItem as ClsTypeDrink;
+            id = selected.Id;
+
+            LoadDrink(id);
+        }
+
+        private void btnAddDrink_Click(object sender, EventArgs e)
+        {
+            ClsTableDrink table = lsvHoadon.Tag as ClsTableDrink;
+            int idBill = Bill.Instance.getBill(table.Id);
+            int drink = (cobDrink.SelectedItem as ClsDrink).Id;
+            int count = (int)numSoluongdrink.Value;
+            if (idBill == -1)
+            {
+                Bill.Instance.AddBill(table.Id);
+                DrinkBill.Instance.AddDrinkBill(Bill.Instance.getIdBill(), drink, count);
+            }
+            else
+            {
+                DrinkBill.Instance.AddDrinkBill(idBill, drink, count);
+            }
+            ShowBill(table.Id);
+            LoadTableDrink();
+        }
+
+        private void btnThanhthoan_Click(object sender, EventArgs e)
+        {
+            ClsTableDrink table = lsvHoadon.Tag as ClsTableDrink;
+            int idBill = Bill.Instance.getBill(table.Id);
+            if (idBill != -1)
+            {
+                if(MessageBox.Show("Thanh toán hóa đơn cho " + table.Name, "Thông Báo", MessageBoxButtons.OKCancel)== System.Windows.Forms.DialogResult.OK); 
+                {
+                    Bill.Instance.CheckOut(idBill);
+                    ShowBill(table.Id);
+                    LoadTableDrink();
+                }
+            }
+        }
     }
 }
