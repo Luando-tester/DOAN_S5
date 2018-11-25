@@ -133,7 +133,7 @@ namespace QLCF
                         btnTable.BackColor = Color.White;
                         break;
                     default:
-                        btnTable.BackColor = Color.Aqua;
+                        btnTable.BackColor = Color.Crimson;
                         break;
                 }
                 flTabledrink.Controls.Add(btnTable);
@@ -196,6 +196,7 @@ namespace QLCF
             LoadDrink(id);
         }
 
+        //Chức năng Order
         private void btnAddDrink_Click(object sender, EventArgs e)
         {
             ClsTableDrink table = lsvHoadon.Tag as ClsTableDrink;
@@ -215,6 +216,7 @@ namespace QLCF
             LoadTableDrink();
         }
 
+        //Chức năng thanh toán
         private void btnThanhthoan_Click(object sender, EventArgs e)
         {
             ClsTableDrink table = lsvHoadon.Tag as ClsTableDrink;
