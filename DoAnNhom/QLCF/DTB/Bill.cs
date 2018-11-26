@@ -46,9 +46,9 @@ namespace QLCF.DTB
                 return 1;
             }
         }
-        public void CheckOut(int id)
+        public void CheckOut(int id,int discount)
         {
-            DataProvider.Instance.ExcuteNonQuery("EXEC SP_BillidTable " + id);
+            DataProvider.Instance.ExcuteNonQuery("EXEC SP_BillidTable @id , @discount", new object[]{id,discount});
         }
     }
 }

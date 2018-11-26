@@ -36,12 +36,20 @@ namespace QLCF.Class
             get { return status; }
             set { status = value; }
         }
-        public ClsBill(int id, DateTime? dateCheckIn, DateTime? dateCheckOut, int status)
+        private int discount;
+
+        public int Discount
+        {
+            get { return discount; }
+            set { discount = value; }
+        }
+        public ClsBill(int id, DateTime? dateCheckIn, DateTime? dateCheckOut, int status,int discount = 0)
         {
             this.Id = id;
             this.DateCheckIn = dateCheckIn;
             this.DateCheckOut = dateCheckOut;
             this.Status = status;
+            this.Discount = discount;
         }
         public ClsBill(DataRow row)
         {
@@ -51,6 +59,8 @@ namespace QLCF.Class
             if(dateCheckOutTemp.ToString() != "")
                 this.DateCheckOut = (DateTime?)dateCheckOutTemp;
             this.Status = (int)row["status"];
+            if (row["discount"].ToString() != "")
+                this.Discount = (int)row["discount"];
         }
     }
 }

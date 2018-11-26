@@ -20,6 +20,7 @@ namespace QLCF
             InitializeComponent();
             LoadTypeDrink();
             LoadTableDrink();
+            LoadComboBoxTable(cobLoadTable);
         }
 
         //Hiển thị usercontrol Tài Khoản
@@ -221,14 +222,36 @@ namespace QLCF
         {
             ClsTableDrink table = lsvHoadon.Tag as ClsTableDrink;
             int idBill = Bill.Instance.getBill(table.Id);
+            int discount = (int)numGiamgia.Value;
+            double total = Convert.ToDouble(txtTotalPrice.Text.Split(',')[0]);
+            double totalPrice = (total - (total/100)*discount);
             if (idBill != -1)
             {
-                if(MessageBox.Show("Thanh toán hóa đơn cho " + table.Name, "Thông Báo", MessageBoxButtons.OKCancel)== System.Windows.Forms.DialogResult.OK); 
+                if(MessageBox.Show("Thanh toán hóa đơn cho " + table.Name +"\nTổng Tiền: " + totalPrice , "Thông Báo", MessageBoxButtons.OKCancel)== System.Windows.Forms.DialogResult.OK); 
                 {
-                    Bill.Instance.CheckOut(idBill);
+                    Bill.Instance.CheckOut(idBill,discount);
                     ShowBill(table.Id);
                     LoadTableDrink();
                 }
+            }
+        }
+
+        void LoadComboBoxTable(ComboBox cb)
+        {
+            cb.DataSource = TableDrink.Instance.loadTableDrink();
+            cb.DisplayMember = "Name";
+        }
+
+        private void btnChuyenban_Click(object sender, EventArgs e)
+        {
+            string nameTable1 = (lsvHoadon.Tag as ClsTableDrink).Name;
+            string nameTable2 = (cobLoadTable.SelectedItem as ClsTableDrink).Name;
+            if(MessageBox.Show(string.Format("Bạn có muốn chuyển {0} sang {1} không?",nameTable1,nameTable2),"Thông báo",MessageBoxButtons.OKCancel)== System.Windows.Forms.DialogResult.OK)
+            { 
+                int id1 = (lsvHoadon.Tag as ClsTableDrink).Id;
+                int id2 = (cobLoadTable.SelectedItem as ClsTableDrink).Id;
+                TableDrink.Instance.chuyenban(id1,id2);
+                LoadTableDrink();
             }
         }
     }

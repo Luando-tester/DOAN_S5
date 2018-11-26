@@ -33,5 +33,11 @@ namespace QLCF.DTB
             }
             return tablelist;
         }
+
+        public void chuyenban(int id1, int id2)
+        {
+            DataProvider.Instance.ExcuteQuery("EXEC SP_chuyenBan @idTable1 , @idTable2", new object[]{id1,id2});
+        }
+
     }
 }

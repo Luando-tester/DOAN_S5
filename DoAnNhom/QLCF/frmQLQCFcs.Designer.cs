@@ -41,7 +41,7 @@
             this.cobLoaidrink = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtTotalPrice = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cobLoadTable = new System.Windows.Forms.ComboBox();
             this.numGiamgia = new System.Windows.Forms.NumericUpDown();
             this.btnThanhthoan = new System.Windows.Forms.Button();
             this.btnGiamgia = new System.Windows.Forms.Button();
@@ -194,7 +194,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.txtTotalPrice);
-            this.panel5.Controls.Add(this.comboBox1);
+            this.panel5.Controls.Add(this.cobLoadTable);
             this.panel5.Controls.Add(this.numGiamgia);
             this.panel5.Controls.Add(this.btnThanhthoan);
             this.panel5.Controls.Add(this.btnGiamgia);
@@ -214,13 +214,13 @@
             this.txtTotalPrice.TabIndex = 4;
             this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // comboBox1
+            // cobLoadTable
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(97, 24);
-            this.comboBox1.TabIndex = 0;
+            this.cobLoadTable.FormattingEnabled = true;
+            this.cobLoadTable.Location = new System.Drawing.Point(3, 30);
+            this.cobLoadTable.Name = "cobLoadTable";
+            this.cobLoadTable.Size = new System.Drawing.Size(97, 24);
+            this.cobLoadTable.TabIndex = 0;
             // 
             // numGiamgia
             // 
@@ -265,6 +265,7 @@
             this.btnChuyenban.TabIndex = 0;
             this.btnChuyenban.Text = "Chuyển Bàn";
             this.btnChuyenban.UseVisualStyleBackColor = true;
+            this.btnChuyenban.Click += new System.EventHandler(this.btnChuyenban_Click);
             // 
             // panel3
             // 
@@ -483,7 +484,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabPage tabPquanly;
         private System.Windows.Forms.Button btnAddDrink;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cobLoadTable;
         private System.Windows.Forms.NumericUpDown numGiamgia;
         private System.Windows.Forms.Button btnThanhthoan;
         private System.Windows.Forms.Button btnGiamgia;
