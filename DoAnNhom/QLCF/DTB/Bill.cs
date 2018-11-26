@@ -46,9 +46,14 @@ namespace QLCF.DTB
                 return 1;
             }
         }
-        public void CheckOut(int id,int discount)
+        public void CheckOut(int id,int discount,float totalPrice)
         {
-            DataProvider.Instance.ExcuteNonQuery("EXEC SP_BillidTable @id , @discount", new object[]{id,discount});
+            DataProvider.Instance.ExcuteNonQuery("EXEC SP_BillidTable @id , @discount , @totalPrice", new object[]{id,discount,totalPrice});
+        }
+
+        public DataTable getHoadon(DateTime checkIn, DateTime checkOut)
+        {
+            return DataProvider.Instance.ExcuteQuery("EXEC SP_getHoadon @dateCheckIn , @dateCheckOut", new object[]{checkIn,checkOut});
         }
     }
 }

@@ -229,7 +229,7 @@ namespace QLCF
             {
                 if(MessageBox.Show("Thanh toán hóa đơn cho " + table.Name +"\nTổng Tiền: " + totalPrice , "Thông Báo", MessageBoxButtons.OKCancel)== System.Windows.Forms.DialogResult.OK); 
                 {
-                    Bill.Instance.CheckOut(idBill,discount);
+                    Bill.Instance.CheckOut(idBill,discount,(float)totalPrice);
                     ShowBill(table.Id);
                     LoadTableDrink();
                 }

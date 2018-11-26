@@ -69,6 +69,7 @@
             // 
             // dtgvHoadon
             // 
+            this.dtgvHoadon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvHoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvHoadon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvHoadon.Location = new System.Drawing.Point(0, 0);
@@ -98,6 +99,7 @@
             this.btnXemhoadon.TabIndex = 4;
             this.btnXemhoadon.Text = "Xem Hóa Đơn";
             this.btnXemhoadon.UseVisualStyleBackColor = true;
+            this.btnXemhoadon.Click += new System.EventHandler(this.btnXemhoadon_Click);
             // 
             // timePickdenngay
             // 
