@@ -64,23 +64,30 @@ namespace QLCF
 
         private void txtIDthucuong_TextChanged(object sender, EventArgs e)
         {
-            if (dtgvThucuong.SelectedCells.Count > 0)
+            try
             {
-                int id = (int)dtgvThucuong.SelectedCells[0].OwningRow.Cells["TypeDrink"].Value;
-                ClsTypeDrink typedrink = TypeDrink.Instance.loadTypeDrinkbyId(id);
-                cobLoaithucuong.SelectedItem = typedrink;
-                int index = -1;
-                int i = 0;
-                foreach (ClsTypeDrink item in cobLoaithucuong.Items)
+                if (dtgvThucuong.SelectedCells.Count > 0)
                 {
-                    if (item.Id == typedrink.Id)
+                    int id = (int)dtgvThucuong.SelectedCells[0].OwningRow.Cells["TypeDrink"].Value;
+                    ClsTypeDrink typedrink = TypeDrink.Instance.loadTypeDrinkbyId(id);
+                    cobLoaithucuong.SelectedItem = typedrink;
+                    int index = -1;
+                    int i = 0;
+                    foreach (ClsTypeDrink item in cobLoaithucuong.Items)
                     {
-                        index = i;
-                        break;
+                        if (item.Id == typedrink.Id)
+                        {
+                            index = i;
+                            break;
+                        }
+                        i++;
                     }
-                    i++;
+                    cobLoaithucuong.SelectedIndex = index;
                 }
-                cobLoaithucuong.SelectedIndex = index;
+            }
+            catch
+            {
+
             }
         }
 
@@ -125,5 +132,19 @@ namespace QLCF
             else
                 MessageBox.Show("Có lỗi khi xóa");
         }
+
+        List<ClsDrink> timDrink(string name)
+        {
+            List<ClsDrink> listDrink = Drink.Instance.timkiem(name);
+
+            return listDrink;
+        }
+
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+            drinklist.DataSource = timDrink(txtTimthucuong.Text);
+        }
+
+        
     }
 }

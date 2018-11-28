@@ -62,5 +62,18 @@ namespace QLCF.DTB
             int result = DataProvider.Instance.ExcuteNonQuery("EXEC SP_deleteDrink @id", new object[]{id});
             return result > 0;
         }
+
+        //tim kiem drink
+        public List<ClsDrink> timkiem(string name)
+        {
+            List<ClsDrink> listDrink = new List<ClsDrink>();
+            DataTable data = DataProvider.Instance.ExcuteQuery("SELECT * FROM drink WHERE dbo.GetUnsignString(name) LIKE N'%' + dbo.GetUnsignString(N'"+ name +"') + '%'");
+            foreach (DataRow item in data.Rows)
+            {
+                ClsDrink drink = new ClsDrink(item);
+                listDrink.Add(drink);
+            }
+            return listDrink;
+        }
     }
 }
