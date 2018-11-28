@@ -75,5 +75,9 @@ namespace QLCF.DTB
             }
             return listDrink;
         }
+        public void deleteDrinkByTypeId(int id)
+        {
+            DataProvider.Instance.ExcuteQuery("EXEC SP_deleteDrinkByType @idTypeDrink", new object[] { id });
+        }
     }
 }

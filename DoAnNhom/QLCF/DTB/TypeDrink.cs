@@ -45,5 +45,25 @@ namespace QLCF.DTB
 
             return name;
         }
+
+        //them type drink
+        public bool themTypeDrink(string name)
+        {
+            int result = DataProvider.Instance.ExcuteNonQuery("EXEC SP_themLoaidrink @name", new object[] { name });
+            return result > 0;
+        }
+
+        //sua type drink
+        public bool suaTypeDrink(int id, string name)
+        {
+            int result = DataProvider.Instance.ExcuteNonQuery("EXEC SP_capnhatLoaidrink @id , @name", new object[] { id, name });
+            return result > 0;
+        }
+        public bool xoaTypeDrink(int id)
+        {
+            Drink.Instance.deleteDrinkByTypeId(id);
+            int result = DataProvider.Instance.ExcuteNonQuery("EXEC SP_xoaLoaidrink @id", new object[] { id });
+            return result > 0;
+        }
     }
 }
