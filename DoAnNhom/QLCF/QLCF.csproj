@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\ClsAccount.cs" />
     <Compile Include="Class\ClsBill.cs" />
     <Compile Include="Class\ClsDrink.cs" />
     <Compile Include="Class\ClsDrinkBill.cs" />

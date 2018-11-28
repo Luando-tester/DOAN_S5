@@ -36,7 +36,8 @@ namespace QLCF
             string password = txtMatkhau.Text;
             if (Logins(username,password))
             {
-                frmQLQCFcs frmQLCF = new frmQLQCFcs();
+                ClsAccount loginAccount = Login.Instance.getAccount(username);
+                frmQLQCFcs frmQLCF = new frmQLQCFcs(loginAccount);
                 this.Hide();
                 frmQLCF.ShowDialog();
                 this.Show();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
+using QLCF.Class;
 
 namespace QLCF.DTB
 {
@@ -23,6 +24,17 @@ namespace QLCF.DTB
             string query = "SELECT * FROM dbo.Account WHERE Username = @username and Password = @password";
             DataTable result = DataProvider.Instance.ExcuteQuery(query,new object[]{username,password});
             return result.Rows.Count > 0;
+        }
+
+        public ClsAccount getAccount(string username)
+        {
+            DataTable data = DataProvider.Instance.ExcuteQuery("SELECT * FROM dbo.Account WHERE UserName = '" + username + "'");
+
+            foreach (DataRow item in data.Rows)
+            {
+                return new ClsAccount(item);
+            }
+            return null;
         }
     }
 }

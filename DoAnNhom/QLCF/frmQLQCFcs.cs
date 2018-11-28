@@ -14,13 +14,29 @@ namespace QLCF
 {
     public partial class frmQLQCFcs : Form
     {
+        private ClsAccount loginAccount;
+
+        public ClsAccount LoginAccount
+        {
+            get { return loginAccount; }
+            set 
+                {   loginAccount = value; 
+                    typeAccount(loginAccount.Type);
+                }
+        }
         
-        public frmQLQCFcs()
+        public frmQLQCFcs(ClsAccount acc)
         {
             InitializeComponent();
+            this.LoginAccount = acc;
             LoadTypeDrink();
             LoadTableDrink();
             LoadComboBoxTable(cobLoadTable);
+        }
+
+        void typeAccount(int Type)
+        {
+            btnAdmin.Enabled = Type == 0;
         }
 
         //Hiển thị usercontrol Tài Khoản
@@ -33,7 +49,9 @@ namespace QLCF
                 UCtaikhoan.Instace.BringToFront();
             }
             else
+            {
                 UCtaikhoan.Instace.BringToFront();
+            }
         }
 
         //Chức năng thoát chương trình
@@ -201,6 +219,10 @@ namespace QLCF
         private void btnAddDrink_Click(object sender, EventArgs e)
         {
             ClsTableDrink table = lsvHoadon.Tag as ClsTableDrink;
+            if (table == null)
+            {
+                MessageBox.Show("Chưa chọn bàn");
+            }
             int idBill = Bill.Instance.getBill(table.Id);
             int drink = (cobDrink.SelectedItem as ClsDrink).Id;
             int count = (int)numSoluongdrink.Value;
@@ -236,12 +258,14 @@ namespace QLCF
             }
         }
 
+        //Load danh sách table để chuyển bàn
         void LoadComboBoxTable(ComboBox cb)
         {
             cb.DataSource = TableDrink.Instance.loadTableDrink();
             cb.DisplayMember = "Name";
         }
 
+        //Chức năng chuyển bàn
         private void btnChuyenban_Click(object sender, EventArgs e)
         {
             string nameTable1 = (lsvHoadon.Tag as ClsTableDrink).Name;
@@ -253,6 +277,11 @@ namespace QLCF
                 TableDrink.Instance.chuyenban(id1,id2);
                 LoadTableDrink();
             }
+        }
+
+        private void tabCquanly_MouseClick(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }

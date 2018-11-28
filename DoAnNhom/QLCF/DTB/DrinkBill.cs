@@ -36,5 +36,11 @@ namespace QLCF.DTB
         {
             DataProvider.Instance.ExcuteNonQuery("SP_AddDrinkBill @idBill , @idDrink , @count",new object[]{ idBill, idDrink, count});
         }
+
+        //xoa drink khi drink nam trong drinkbill
+        public void deleteDrinkId(int id)
+        {
+            DataProvider.Instance.ExcuteQuery("EXEC SP_deleteDrinkbyId @idDrink", new object[] { id });
+        }
     }
 }

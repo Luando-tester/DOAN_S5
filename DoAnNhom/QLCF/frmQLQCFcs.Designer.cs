@@ -95,6 +95,7 @@
             this.tabCquanly.SelectedIndex = 0;
             this.tabCquanly.Size = new System.Drawing.Size(724, 498);
             this.tabCquanly.TabIndex = 0;
+            this.tabCquanly.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabCquanly_MouseClick);
             // 
             // tabPtrangchu
             // 

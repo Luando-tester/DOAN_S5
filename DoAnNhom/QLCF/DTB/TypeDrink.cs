@@ -30,5 +30,20 @@ namespace QLCF.DTB
             }
             return listTypeDrink;
         }
+
+        public ClsTypeDrink loadTypeDrinkbyId(int id)
+        {
+            ClsTypeDrink name = null;
+
+            DataTable data = DataProvider.Instance.ExcuteQuery("EXEC SP_LoaiDrinkId @id",new object[]{id});
+
+            foreach (DataRow item in data.Rows)
+            {
+                name = new ClsTypeDrink(item);
+                return name;
+            }
+
+            return name;
+        }
     }
 }

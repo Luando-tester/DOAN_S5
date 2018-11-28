@@ -29,5 +29,38 @@ namespace QLCF.DTB
             }
             return list;
         }
+        public List<ClsDrink> getListDrink()
+        {
+            List<ClsDrink> listDrink = new List<ClsDrink>();
+            DataTable data = DataProvider.Instance.ExcuteQuery("EXEC SP_listDrink");
+            foreach (DataRow item in data.Rows)
+            {
+                ClsDrink drink = new ClsDrink(item);
+                listDrink.Add(drink);
+            }
+            return listDrink;
+        }
+
+        //Thuc hien query them drink
+        public bool themDrink(string name, int id, float price)
+        {
+            int result = DataProvider.Instance.ExcuteNonQuery("EXEC SP_themDrink @name , @idloai , @price",new object[]{name,id,price});
+            return result > 0;
+        }
+
+        //thuc hien query cap nhat drink
+        public bool suaDrink(int id, string name, int idLoai, float price)
+        {
+            int result = DataProvider.Instance.ExcuteNonQuery("EXEC SP_updateDrink @id , @name , @idloai , @price", new object[]{id,name,idLoai,price});
+            return result > 0;
+        }
+
+        //thuc hien xoa drink
+        public bool xoaDrink(int id)
+        {
+            DrinkBill.Instance.deleteDrinkId(id);
+            int result = DataProvider.Instance.ExcuteNonQuery("EXEC SP_deleteDrink @id", new object[]{id});
+            return result > 0;
+        }
     }
 }
