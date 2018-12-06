@@ -55,5 +55,9 @@ namespace QLCF.DTB
         {
             return DataProvider.Instance.ExcuteQuery("EXEC SP_getHoadon @dateCheckIn , @dateCheckOut", new object[]{checkIn,checkOut});
         }
+        public void deleteBillByidTable(int id)
+        {
+            DataProvider.Instance.ExcuteQuery("EXEC SP_deleteBillbyIdTable @id", new object[] { id });
+        }  
     }
 }

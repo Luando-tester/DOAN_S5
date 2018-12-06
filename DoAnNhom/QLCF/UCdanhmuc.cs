@@ -51,40 +51,75 @@ namespace QLCF
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string name = txtTendanhmuc.Text;
-            if (TypeDrink.Instance.themTypeDrink(name))
+            if (txtTendanhmuc.Text == "")
             {
-                MessageBox.Show("Thêm " + name + " thành công");
-                loadListType();
+                MessageBox.Show("Vui lòng đặt tên danh mục");
             }
             else
-                MessageBox.Show("Có lỗi khi thêm");
+            {
+                string name = txtTendanhmuc.Text;
+                if (TypeDrink.Instance.themTypeDrink(name))
+                {
+                    MessageBox.Show("Thêm " + name + " thành công");
+                    loadListType();
+                }
+                else
+                    MessageBox.Show("Có lỗi khi thêm");
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string name = txtTendanhmuc.Text;
-            int id = Convert.ToInt32(txtIDdanhmuc.Text);
-            if (TypeDrink.Instance.suaTypeDrink(id,name))
+            try
             {
-                MessageBox.Show("Sửa " + name + " thành công");
-                loadListType();
+                string name = txtTendanhmuc.Text;
+                int id = Convert.ToInt32(txtIDdanhmuc.Text);
+                if (TypeDrink.Instance.suaTypeDrink(id, name))
+                {
+                    MessageBox.Show("Sửa " + name + " thành công");
+                    loadListType();
+                }
+                else
+                    MessageBox.Show("Có lỗi khi sửa");
             }
-            else
+            catch (Exception)
+            {
                 MessageBox.Show("Có lỗi khi sửa");
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtIDdanhmuc.Text);
-            string name = txtTendanhmuc.Text;
-            if (TypeDrink.Instance.xoaTypeDrink(id))
+            try
             {
-                MessageBox.Show("Xóa " + name + " thành công");
-                loadListType();
+                int id = Convert.ToInt32(txtIDdanhmuc.Text);
+                string name = txtTendanhmuc.Text;
+                if (TypeDrink.Instance.xoaTypeDrink(id))
+                {
+                    MessageBox.Show("Xóa " + name + " thành công");
+                    loadListType();
+                }
+                else
+                    MessageBox.Show("Có lỗi khi xóa");
             }
-            else
-                MessageBox.Show("Có lỗi khi xóa");
+            catch (Exception)
+            {
+                MessageBox.Show("Thanh toán drink trước khi xóa");
+            }
+        }
+
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string name = txtTimdanhmuc.Text;
+                typeList.DataSource = TypeDrink.Instance.search(name);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Có lỗi khi tìm kiếm");
+            }
+
         }
     }
 }

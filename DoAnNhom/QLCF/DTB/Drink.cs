@@ -67,7 +67,7 @@ namespace QLCF.DTB
         public List<ClsDrink> timkiem(string name)
         {
             List<ClsDrink> listDrink = new List<ClsDrink>();
-            DataTable data = DataProvider.Instance.ExcuteQuery("SELECT * FROM drink WHERE dbo.GetUnsignString(name) LIKE N'%' + dbo.GetUnsignString(N'"+ name +"') + '%'");
+            DataTable data = DataProvider.Instance.ExcuteQuery("SELECT * FROM drink WHERE dbo.GetUnsignString(name) LIKE N'%' + dbo.GetUnsignString(N'" + name + "') + '%'");
             foreach (DataRow item in data.Rows)
             {
                 ClsDrink drink = new ClsDrink(item);

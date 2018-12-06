@@ -12,4 +12,3 @@ C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCthucuon
 C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCdanhmuc.resources
 C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCbancs.resources
 C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCadmin.resources
-C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.csprojResolveAssemblyReference.cache

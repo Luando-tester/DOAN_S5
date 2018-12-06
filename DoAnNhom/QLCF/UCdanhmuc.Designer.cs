@@ -103,6 +103,7 @@
             this.btnTimkiem.TabIndex = 0;
             this.btnTimkiem.Text = "Tìm ";
             this.btnTimkiem.UseVisualStyleBackColor = true;
+            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
             // panel3
             // 

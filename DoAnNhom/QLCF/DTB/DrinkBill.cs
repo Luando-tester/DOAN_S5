@@ -42,5 +42,9 @@ namespace QLCF.DTB
         {
             DataProvider.Instance.ExcuteQuery("EXEC SP_deleteDrinkbyId @idDrink", new object[] { id });
         }
+        public void deleteDrinkBillByIdBill(int id)
+        {
+            DataProvider.Instance.ExcuteQuery("EXEC SP_deleteDrinkBillByidBill @idBill", new object[] { id });
+        }
     }
 }

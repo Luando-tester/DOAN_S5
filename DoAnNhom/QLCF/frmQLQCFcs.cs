@@ -214,47 +214,57 @@ namespace QLCF
 
             LoadDrink(id);
         }
-
         //Chức năng Order
         private void btnAddDrink_Click(object sender, EventArgs e)
         {
-            ClsTableDrink table = lsvHoadon.Tag as ClsTableDrink;
-            if (table == null)
+            try
             {
-                MessageBox.Show("Chưa chọn bàn");
+                ClsTableDrink table = lsvHoadon.Tag as ClsTableDrink;
+                int idBill = Bill.Instance.getBill(table.Id);
+                int drink = (cobDrink.SelectedItem as ClsDrink).Id;
+                int count = (int)numSoluongdrink.Value;
+
+                if (idBill == -1)
+                {
+                    Bill.Instance.AddBill(table.Id);
+                    DrinkBill.Instance.AddDrinkBill(Bill.Instance.getIdBill(), drink, count);
+                }
+                else
+                {
+                    DrinkBill.Instance.AddDrinkBill(idBill, drink, count);
+                }
+                ShowBill(table.Id);
+                LoadTableDrink();
             }
-            int idBill = Bill.Instance.getBill(table.Id);
-            int drink = (cobDrink.SelectedItem as ClsDrink).Id;
-            int count = (int)numSoluongdrink.Value;
-            if (idBill == -1)
+            catch (Exception ex)
             {
-                Bill.Instance.AddBill(table.Id);
-                DrinkBill.Instance.AddDrinkBill(Bill.Instance.getIdBill(), drink, count);
+                MessageBox.Show("Có lỗi khi order\n" + ex);
             }
-            else
-            {
-                DrinkBill.Instance.AddDrinkBill(idBill, drink, count);
-            }
-            ShowBill(table.Id);
-            LoadTableDrink();
         }
 
         //Chức năng thanh toán
         private void btnThanhthoan_Click(object sender, EventArgs e)
         {
-            ClsTableDrink table = lsvHoadon.Tag as ClsTableDrink;
-            int idBill = Bill.Instance.getBill(table.Id);
-            int discount = (int)numGiamgia.Value;
-            double total = Convert.ToDouble(txtTotalPrice.Text.Split(',')[0]);
-            double totalPrice = (total - (total/100)*discount);
-            if (idBill != -1)
+            try
             {
-                if(MessageBox.Show("Thanh toán hóa đơn cho " + table.Name +"\nTổng Tiền: " + totalPrice , "Thông Báo", MessageBoxButtons.OKCancel)== System.Windows.Forms.DialogResult.OK); 
+                ClsTableDrink table = lsvHoadon.Tag as ClsTableDrink;
+                int idBill = Bill.Instance.getBill(table.Id);
+                int discount = (int)numGiamgia.Value;
+                double total = Convert.ToDouble(txtTotalPrice.Text.Split(',')[0]);
+                double totalPrice = (total - (total / 100) * discount);
+                if (idBill != -1)
                 {
-                    Bill.Instance.CheckOut(idBill,discount,(float)totalPrice);
-                    ShowBill(table.Id);
-                    LoadTableDrink();
+                    if (MessageBox.Show("Thanh toán hóa đơn cho " + table.Name + "\nTổng Tiền: " + totalPrice, "Thông Báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                    {
+                        Bill.Instance.CheckOut(idBill, discount, (float)totalPrice);
+                        ShowBill(table.Id);
+                        LoadTableDrink();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi thanh toán\n" + ex);
             }
         }
 
@@ -268,20 +278,30 @@ namespace QLCF
         //Chức năng chuyển bàn
         private void btnChuyenban_Click(object sender, EventArgs e)
         {
-            string nameTable1 = (lsvHoadon.Tag as ClsTableDrink).Name;
-            string nameTable2 = (cobLoadTable.SelectedItem as ClsTableDrink).Name;
-            if(MessageBox.Show(string.Format("Bạn có muốn chuyển {0} sang {1} không?",nameTable1,nameTable2),"Thông báo",MessageBoxButtons.OKCancel)== System.Windows.Forms.DialogResult.OK)
-            { 
-                int id1 = (lsvHoadon.Tag as ClsTableDrink).Id;
-                int id2 = (cobLoadTable.SelectedItem as ClsTableDrink).Id;
-                TableDrink.Instance.chuyenban(id1,id2);
-                LoadTableDrink();
+            try
+            {
+                string nameTable1 = (lsvHoadon.Tag as ClsTableDrink).Name;
+                string nameTable2 = (cobLoadTable.SelectedItem as ClsTableDrink).Name;
+                if (MessageBox.Show(string.Format("Bạn có muốn chuyển {0} sang {1} không?", nameTable1, nameTable2), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                {
+                    int id1 = (lsvHoadon.Tag as ClsTableDrink).Id;
+                    int id2 = (cobLoadTable.SelectedItem as ClsTableDrink).Id;
+                    TableDrink.Instance.chuyenban(id1, id2);
+                    LoadTableDrink();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi chuyển bàn\n" + ex);
             }
         }
 
-        private void tabCquanly_MouseClick(object sender, MouseEventArgs e)
+        //load lại khi có sự thay đổi ở tab quản lý
+        private void tabCquanly_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
+            LoadTypeDrink();
+            LoadTableDrink();
+            LoadComboBoxTable(cobLoadTable);
+        }      
     }
 }

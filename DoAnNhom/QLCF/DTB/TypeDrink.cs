@@ -59,11 +59,24 @@ namespace QLCF.DTB
             int result = DataProvider.Instance.ExcuteNonQuery("EXEC SP_capnhatLoaidrink @id , @name", new object[] { id, name });
             return result > 0;
         }
+        //xoa type drink
         public bool xoaTypeDrink(int id)
         {
             Drink.Instance.deleteDrinkByTypeId(id);
             int result = DataProvider.Instance.ExcuteNonQuery("EXEC SP_xoaLoaidrink @id", new object[] { id });
             return result > 0;
+        }
+        //tim kiem 
+        public List<ClsTypeDrink> search(string name)
+        {
+            List<ClsTypeDrink> list = new List<ClsTypeDrink>();
+            DataTable data = DataProvider.Instance.ExcuteQuery("SELECT * FROM TypeDrink WHERE dbo.GetUnsignString(name) LIKE N'%' + dbo.GetUnsignString(N'" + name + "') + '%'");
+            foreach (DataRow item in data.Rows)
+            {
+                ClsTypeDrink typedrink = new ClsTypeDrink(item);
+                list.Add(typedrink);
+            }
+            return list;
         }
     }
 }

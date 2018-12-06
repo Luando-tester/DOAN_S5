@@ -59,7 +59,14 @@ namespace QLCF
         //event show danh sach drink
         private void btnXem_Click(object sender, EventArgs e)
         {
-            loadListDrink();
+            try
+            {
+                loadListDrink();
+            }
+            catch
+            {
+                MessageBox.Show("Có lỗi khi xem");
+            }
         }
 
         private void txtIDthucuong_TextChanged(object sender, EventArgs e)
@@ -93,58 +100,85 @@ namespace QLCF
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string name = txtTenthucuong.Text;
-            int typeDrink = (cobLoaithucuong.SelectedItem as ClsTypeDrink).Id;
-            float price = (float)numGiathucuong.Value;
-            if (Drink.Instance.themDrink(name, typeDrink, price))
+            try
             {
-                MessageBox.Show("Thêm "+ name +" thành công");
-                loadListDrink();
+                string name = txtTenthucuong.Text;
+                int typeDrink = (cobLoaithucuong.SelectedItem as ClsTypeDrink).Id;
+                float price = (float)numGiathucuong.Value;
+                if (name != "" && price != 0 && typeDrink != 0)
+                {
+                    if (Drink.Instance.themDrink(name, typeDrink, price))
+                    {
+                        MessageBox.Show("Thêm " + name + " thành công");
+                        loadListDrink();
+                    }
+                    else
+                        MessageBox.Show("Có lỗi khi thêm");
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng không bỏ trống thông tin khi thêm");
+                }
             }
-            else
+            catch (Exception)
+            {
                 MessageBox.Show("Có lỗi khi thêm");
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string name = txtTenthucuong.Text;
-            int typeDrink = (cobLoaithucuong.SelectedItem as ClsTypeDrink).Id;
-            float price = (float)numGiathucuong.Value;
-            int id = Convert.ToInt32(txtIDthucuong.Text);
-            if (Drink.Instance.suaDrink(id,name, typeDrink, price))
+            try
             {
-                MessageBox.Show("Cập nhật " + name + " thành công");
-                loadListDrink();
+                string name = txtTenthucuong.Text;
+                int typeDrink = (cobLoaithucuong.SelectedItem as ClsTypeDrink).Id;
+                float price = (float)numGiathucuong.Value;
+                int id = Convert.ToInt32(txtIDthucuong.Text);
+                if (Drink.Instance.suaDrink(id, name, typeDrink, price))
+                {
+                    MessageBox.Show("Cập nhật " + name + " thành công");
+                    loadListDrink();
+                }
+                else
+                    MessageBox.Show("Có lỗi khi cập nhật");
             }
-            else
+            catch (Exception)
+            {
                 MessageBox.Show("Có lỗi khi cập nhật");
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string name = txtTenthucuong.Text;
-            int id = Convert.ToInt32(txtIDthucuong.Text);
-            if (Drink.Instance.xoaDrink(id))
+            try
             {
-                MessageBox.Show("Xóa" + name + " thành công");
-                loadListDrink();
+                string name = txtTenthucuong.Text;
+                int id = Convert.ToInt32(txtIDthucuong.Text);
+                if (Drink.Instance.xoaDrink(id))
+                {
+                    MessageBox.Show("Xóa" + name + " thành công");
+                    loadListDrink();
+                }
+                else
+                    MessageBox.Show("Có lỗi khi xóa");
             }
-            else
+            catch (Exception)
+            {
                 MessageBox.Show("Có lỗi khi xóa");
-        }
-
-        List<ClsDrink> timDrink(string name)
-        {
-            List<ClsDrink> listDrink = Drink.Instance.timkiem(name);
-
-            return listDrink;
+            }
         }
 
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
-            drinklist.DataSource = timDrink(txtTimthucuong.Text);
-        }
-
-        
+            try
+            {
+                string nameDrink = txtTimthucuong.Text;
+                drinklist.DataSource = Drink.Instance.timkiem(nameDrink);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Có lỗi khi tìm kiếm");
+            }
+        } 
     }
 }
