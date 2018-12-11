@@ -50,7 +50,7 @@
             this.dtgvAccount = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.cboTypeAccount = new System.Windows.Forms.ComboBox();
+            this.numTypeAccount = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -58,6 +58,7 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTypeAccount)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -108,10 +109,11 @@
             this.btnTimkiem.TabIndex = 0;
             this.btnTimkiem.Text = "Tìm ";
             this.btnTimkiem.UseVisualStyleBackColor = true;
+            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.cboTypeAccount);
+            this.panel3.Controls.Add(this.numTypeAccount);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.txtPassWord);
             this.panel3.Controls.Add(this.label5);
@@ -189,6 +191,7 @@
             this.btnXem.TabIndex = 6;
             this.btnXem.Text = "Xem";
             this.btnXem.UseVisualStyleBackColor = true;
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
             // btnSua
             // 
@@ -198,6 +201,7 @@
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -207,6 +211,7 @@
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -216,6 +221,7 @@
             this.btnThem.TabIndex = 3;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtUsername
             // 
@@ -270,13 +276,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh Sách Tài Khoản";
             // 
-            // cboTypeAccount
+            // numTypeAccount
             // 
-            this.cboTypeAccount.FormattingEnabled = true;
-            this.cboTypeAccount.Location = new System.Drawing.Point(27, 214);
-            this.cboTypeAccount.Name = "cboTypeAccount";
-            this.cboTypeAccount.Size = new System.Drawing.Size(121, 24);
-            this.cboTypeAccount.TabIndex = 14;
+            this.numTypeAccount.Location = new System.Drawing.Point(27, 214);
+            this.numTypeAccount.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numTypeAccount.Name = "numTypeAccount";
+            this.numTypeAccount.Size = new System.Drawing.Size(49, 23);
+            this.numTypeAccount.TabIndex = 14;
+            this.numTypeAccount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // UCadmin
             // 
@@ -297,6 +312,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTypeAccount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -325,7 +341,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDisplayName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cboTypeAccount;
+        private System.Windows.Forms.NumericUpDown numTypeAccount;
 
     }
 }

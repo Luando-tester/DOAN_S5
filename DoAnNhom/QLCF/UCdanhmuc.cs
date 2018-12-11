@@ -94,13 +94,17 @@ namespace QLCF
             {
                 int id = Convert.ToInt32(txtIDdanhmuc.Text);
                 string name = txtTendanhmuc.Text;
-                if (TypeDrink.Instance.xoaTypeDrink(id))
+                DialogResult dialog = MessageBox.Show("Bạn thực sự muốn xóa không ?","Thông Báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+                if (dialog == DialogResult.OK)
                 {
-                    MessageBox.Show("Xóa " + name + " thành công");
-                    loadListType();
+                    if (TypeDrink.Instance.xoaTypeDrink(id))
+                    {
+                        MessageBox.Show("Xóa " + name + " thành công");
+                        loadListType();
+                    }
+                    else
+                        MessageBox.Show("Có lỗi khi xóa");
                 }
-                else
-                    MessageBox.Show("Có lỗi khi xóa");
             }
             catch (Exception)
             {

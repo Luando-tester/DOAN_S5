@@ -154,13 +154,17 @@ namespace QLCF
             {
                 string name = txtTenthucuong.Text;
                 int id = Convert.ToInt32(txtIDthucuong.Text);
-                if (Drink.Instance.xoaDrink(id))
+                DialogResult dialog = MessageBox.Show("Bạn thực sự muốn xóa không ?","Thông Báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+                if (dialog == DialogResult.OK)
                 {
-                    MessageBox.Show("Xóa" + name + " thành công");
-                    loadListDrink();
+                    if (Drink.Instance.xoaDrink(id))
+                    {
+                        MessageBox.Show("Xóa" + name + " thành công");
+                        loadListDrink();
+                    }
+                    else
+                        MessageBox.Show("Có lỗi khi xóa");
                 }
-                else
-                    MessageBox.Show("Có lỗi khi xóa");
             }
             catch (Exception)
             {
