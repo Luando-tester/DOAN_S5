@@ -22,6 +22,9 @@ namespace QLCF.DTB
         //Đường dẫn kết nối đến database
         private string connectionDTB = "Data Source=DESKTOP-IFE256S\\SQLSEVER;Initial Catalog=CoffeManagement;Integrated Security=True";
 
+
+        //thực hiện câu truy vấn 
+        //có thể add được n parameter, dễ sử dụng 
         public DataTable ExcuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
@@ -31,10 +34,13 @@ namespace QLCF.DTB
 
                 SqlCommand command = new SqlCommand(query, connection);
 
+                //Nếu có parameter thì thực hiện
                 if (parameter != null)
                 {
+                    //thực hiện cắt chuỗi = khoảng trống
                     string[] listpara = query.Split(' ');
                     int i = 0;
+                    //khai báo item khi đã trong listpara add thứ tự item với parameter thứ i
                     foreach (string item in listpara)
                     {
                         if (item.Contains('@'))
