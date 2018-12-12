@@ -55,7 +55,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(563, 457);
+            this.panel1.Size = new System.Drawing.Size(643, 457);
             this.panel1.TabIndex = 0;
             // 
             // panel4
@@ -64,7 +64,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 78);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(563, 303);
+            this.panel4.Size = new System.Drawing.Size(643, 303);
             this.panel4.TabIndex = 4;
             // 
             // dtgvHoadon
@@ -74,7 +74,7 @@
             this.dtgvHoadon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvHoadon.Location = new System.Drawing.Point(0, 0);
             this.dtgvHoadon.Name = "dtgvHoadon";
-            this.dtgvHoadon.Size = new System.Drawing.Size(563, 303);
+            this.dtgvHoadon.Size = new System.Drawing.Size(643, 303);
             this.dtgvHoadon.TabIndex = 0;
             // 
             // panel3
@@ -87,15 +87,15 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 381);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(563, 76);
+            this.panel3.Size = new System.Drawing.Size(643, 76);
             this.panel3.TabIndex = 3;
             // 
             // btnXemhoadon
             // 
             this.btnXemhoadon.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXemhoadon.Location = new System.Drawing.Point(435, 15);
+            this.btnXemhoadon.Location = new System.Drawing.Point(497, 15);
             this.btnXemhoadon.Name = "btnXemhoadon";
-            this.btnXemhoadon.Size = new System.Drawing.Size(113, 52);
+            this.btnXemhoadon.Size = new System.Drawing.Size(129, 52);
             this.btnXemhoadon.TabIndex = 4;
             this.btnXemhoadon.Text = "Xem Hóa Đơn";
             this.btnXemhoadon.UseVisualStyleBackColor = true;
@@ -103,16 +103,16 @@
             // 
             // timePickdenngay
             // 
-            this.timePickdenngay.Location = new System.Drawing.Point(61, 46);
+            this.timePickdenngay.Location = new System.Drawing.Point(70, 46);
             this.timePickdenngay.Name = "timePickdenngay";
-            this.timePickdenngay.Size = new System.Drawing.Size(232, 23);
+            this.timePickdenngay.Size = new System.Drawing.Size(265, 23);
             this.timePickdenngay.TabIndex = 3;
             // 
             // timePicktungay
             // 
-            this.timePicktungay.Location = new System.Drawing.Point(61, 13);
+            this.timePicktungay.Location = new System.Drawing.Point(70, 13);
             this.timePicktungay.Name = "timePicktungay";
-            this.timePicktungay.Size = new System.Drawing.Size(232, 23);
+            this.timePicktungay.Size = new System.Drawing.Size(265, 23);
             this.timePicktungay.TabIndex = 2;
             // 
             // label3
@@ -141,14 +141,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(563, 78);
+            this.panel2.Size = new System.Drawing.Size(643, 78);
             this.panel2.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(229, 23);
+            this.label1.Location = new System.Drawing.Point(262, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 23);
             this.label1.TabIndex = 0;
@@ -156,13 +156,13 @@
             // 
             // UChoadon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UChoadon";
-            this.Size = new System.Drawing.Size(563, 457);
+            this.Size = new System.Drawing.Size(643, 457);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHoadon)).EndInit();

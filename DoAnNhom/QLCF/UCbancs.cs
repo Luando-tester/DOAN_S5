@@ -106,7 +106,7 @@ namespace QLCF
             }
             catch (Exception)
             {
-                MessageBox.Show("Lỗi");
+                MessageBox.Show("Thanh toán hóa đơn trước khi xóa bàn");
             }
         }
     }

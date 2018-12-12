@@ -34,6 +34,7 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimkiem = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.numTypeAccount = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPassWord = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,15 +51,14 @@
             this.dtgvAccount = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.numTypeAccount = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTypeAccount)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numTypeAccount)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,6 +68,7 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(563, 457);
@@ -126,6 +127,23 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(248, 370);
             this.panel3.TabIndex = 6;
+            // 
+            // numTypeAccount
+            // 
+            this.numTypeAccount.Location = new System.Drawing.Point(27, 214);
+            this.numTypeAccount.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numTypeAccount.Name = "numTypeAccount";
+            this.numTypeAccount.Size = new System.Drawing.Size(49, 23);
+            this.numTypeAccount.TabIndex = 14;
+            this.numTypeAccount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label6
             // 
@@ -250,6 +268,7 @@
             // 
             // dtgvAccount
             // 
+            this.dtgvAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvAccount.Location = new System.Drawing.Point(0, 0);
@@ -276,23 +295,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh Sách Tài Khoản";
             // 
-            // numTypeAccount
-            // 
-            this.numTypeAccount.Location = new System.Drawing.Point(27, 214);
-            this.numTypeAccount.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numTypeAccount.Name = "numTypeAccount";
-            this.numTypeAccount.Size = new System.Drawing.Size(49, 23);
-            this.numTypeAccount.TabIndex = 14;
-            this.numTypeAccount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // UCadmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -307,12 +309,12 @@
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTypeAccount)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numTypeAccount)).EndInit();
             this.ResumeLayout(false);
 
         }
