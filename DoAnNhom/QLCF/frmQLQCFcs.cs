@@ -223,18 +223,24 @@ namespace QLCF
                 int idBill = Bill.Instance.getBill(table.Id);
                 int drink = (cobDrink.SelectedItem as ClsDrink).Id;
                 int count = (int)numSoluongdrink.Value;
-
-                if (idBill == -1)
+                if (count <= 0)
                 {
-                    Bill.Instance.AddBill(table.Id);
-                    DrinkBill.Instance.AddDrinkBill(Bill.Instance.getIdBill(), drink, count);
+                    MessageBox.Show("Bạn chưa chọn số lượng để Order!");
                 }
                 else
                 {
-                    DrinkBill.Instance.AddDrinkBill(idBill, drink, count);
+                    if (idBill == -1)
+                    {
+                        Bill.Instance.AddBill(table.Id);
+                        DrinkBill.Instance.AddDrinkBill(Bill.Instance.getIdBill(), drink, count);
+                    }
+                    else
+                    {
+                        DrinkBill.Instance.AddDrinkBill(idBill, drink, count);
+                    }
+                    ShowBill(table.Id);
+                    LoadTableDrink();
                 }
-                ShowBill(table.Id);
-                LoadTableDrink();
             }
             catch (Exception ex)
             {

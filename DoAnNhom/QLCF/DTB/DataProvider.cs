@@ -20,7 +20,7 @@ namespace QLCF.DTB
         private DataProvider(){}
 
         //Đường dẫn kết nối đến database
-        private string connectionDTB = "Data Source=.\\SQLEXPRESSA;Initial Catalog=CoffeManagement;Integrated Security=True";
+        private string connectionDTB = "Data Source=DESKTOP-IFE256S\\SQLSEVER;Initial Catalog=CoffeManagement;Integrated Security=True";
 
         public DataTable ExcuteQuery(string query, object[] parameter = null)
         {

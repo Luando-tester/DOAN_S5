@@ -12,3 +12,17 @@ C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCthucuon
 C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCdanhmuc.resources
 C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCbancs.resources
 C:\Users\Lai\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCadmin.resources
+C:\Users\Admin\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.exe
+C:\Users\Admin\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.pdb
+C:\Users\Admin\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\bin\Debug\QLCF.exe
+C:\Users\Admin\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\bin\Debug\QLCF.pdb
+C:\Users\Admin\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.frmDangNhap.resources
+C:\Users\Admin\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.frmQLQCFcs.resources
+C:\Users\Admin\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.Properties.Resources.resources
+C:\Users\Admin\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCadmin.resources
+C:\Users\Admin\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCbancs.resources
+C:\Users\Admin\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UChoadon.resources
+C:\Users\Admin\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCdanhmuc.resources
+C:\Users\Admin\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCtaikhoan.resources
+C:\Users\Admin\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.UCthucuong.resources
+C:\Users\Admin\Documents\GitHub\DOAN_S5\DoAnNhom\QLCF\obj\x86\Debug\QLCF.csproj.GenerateResource.Cache
